@@ -134,7 +134,7 @@ def main(todo_file, done_file, cutoffDays = 7):
     dic = initialize_dic(cutoffDays)
 
     for line in lines:
-        m = re.match("x ([\d]{4}-[\d]{2}-[\d]{2}).*", line)
+        m = re.match(r"x ([\d]{4}-[\d]{2}-[\d]{2}).*", line)
         if m is not None:
             done = m.group(1)
             year, month, day = m.group(1).split("-")
